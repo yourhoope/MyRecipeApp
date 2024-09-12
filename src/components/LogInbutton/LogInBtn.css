@@ -1,0 +1,22 @@
+.loginBtn{
+    height: 35px;
+    width: 70px;
+    background-color: #ffffff;
+    color: #6A9C89;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border:2px solid #6A9C89;;
+    cursor: pointer;
+}
+
+.loginBtn:hover{
+    text-decoration: underline #6A9C89;
+    text-decoration-thickness: 2px ;
+    /* color: #ffffff; */
+}
+
+
+.profile-icon{
+    cursor: pointer;
+}

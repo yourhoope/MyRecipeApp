@@ -1,0 +1,12 @@
+.register-container{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .input-box{
+    display: flex;
+    flex-direction: column;
+} */

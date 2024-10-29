@@ -1,4 +1,20 @@
-/* .addbtn-container{
+
+.home-container{
     display: flex;
-    justify-content: flex-end;
-} */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("./src/assets/food-pattern.avif");
+
+
+}
+
+.home-wrapper{
+ background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    max-width: 1500px;
+}

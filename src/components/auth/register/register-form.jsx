@@ -1,5 +1,5 @@
 import "./register-form.css";
-import { FaUser, FaLock, FaGoogle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { useState } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -40,7 +40,7 @@ function RegisterForm() {
     <div className="register-container">
       <form onSubmit={handleSubmit}>
         <h2>REGISTER</h2>
-        <label htmlFor="email"> Email:</label>
+        <p> Create your account</p>
         <div className="input-box">
           <input
             type="email"
@@ -49,9 +49,8 @@ function RegisterForm() {
             placeholder="email"
             required
           />
-          <FaUser />
         </div>
-        <label htmlFor="password"> Create password:</label>
+
         <div className="input-box">
           <input
             type="password"
@@ -60,7 +59,6 @@ function RegisterForm() {
             placeholder="password"
             required
           />
-          <FaLock />
         </div>
         <div>
           <button type="submit">Submit</button>
@@ -68,13 +66,14 @@ function RegisterForm() {
         {error && <p style={{ color: "red" }}>{error}</p>}
         {success && <p style={{ color: "green" }}>{success}</p>}
         <h4>OR</h4>
-        <div className="btn-container">
+        <div className="google-container">
+        
           <button
             type="button"
             className="googlebtn"
             onClick={handleGoogleSignIn}
           >
-            <FaGoogle /> Continue with Google
+            <FaGoogle /> Register with google
           </button>
         </div>
       </form>

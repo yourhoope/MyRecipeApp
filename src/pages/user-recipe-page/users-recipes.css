@@ -1,0 +1,15 @@
+.rec-container {
+  background-image: url("./src/assets/food-pattern.avif");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rec-wrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1300px;
+  padding: 20px;
+}

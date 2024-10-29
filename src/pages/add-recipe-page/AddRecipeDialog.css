@@ -1,0 +1,170 @@
+
+.dial-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+hr {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+
+.sec-1,
+.details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sec-1 {
+  flex-direction: column; 
+ 
+ } 
+
+.sec-1 input{
+ 
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+
+.list-container input {
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 30px;
+  width: 200px;
+}
+
+
+.input-description{
+    width: 60%;
+    height: 70px;
+}
+
+
+.list-container {
+background-color: #6a9c896b;
+width:100%;
+padding-top: 20px;
+padding-bottom: 20px;
+border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.list-container h1 {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.list-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-container li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-btn,
+.remove-btn {
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.times {
+  max-width: 70px;
+}
+
+.details-container input {
+    padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  width: 80px;
+}
+
+
+.add-btn, 
+.remove-btn,
+.clear-btn {
+  background-color: #6A9C89;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+
+.remove-btn,
+.clear-btn  {
+  background-color: #c82333;
+}
+
+button[type="button"]:last-child {
+  margin-left: 10px;
+}
+
+.form-btns{
+display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textarea{
+  width: 400px;
+  min-height: 70px;
+  max-height: 400px;
+  overflow-y: hidden; 
+  resize: none; 
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

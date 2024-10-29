@@ -1,11 +1,106 @@
-.login-container{
-    height: 400px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+  width: 550px;
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 11px 25px 35px 0px rgba(4, 91, 94, 0.664);
 }
 
+.logInform-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+height: 540px;
+  width: 540px;
+  border-radius: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.123);
+  background-color: white;
+  box-shadow: inset 11px 25px 35px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
 
+h1 {
+  font-size: 1.5rem;
+  color: #333333b9;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
+.loginput-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.loginput-box input {
+  font-size: 1rem;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.loginput-box svg {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+button[type="submit"] {
+  background-color: #6A9C89;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #559A7F;
+}
+
+.newAcc-container {
+display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.google-container {
+  margin-top: 1rem;
+}
+
+.googlebtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #de5246;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.googlebtn:hover {
+  background-color: #c82333;
+}
+
+.googlebtn svg {
+  margin-right: 5px;
+}

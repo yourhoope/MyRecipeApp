@@ -6,7 +6,7 @@ function LogInPage() {
   return (
     <div>
       <NavBar></NavBar>
-      <div className="form-container">
+      <div className="loginpage-container">
         <LogInForm></LogInForm>
       </div>
     </div>

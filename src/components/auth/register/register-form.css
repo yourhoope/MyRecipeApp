@@ -1,12 +1,100 @@
-.register-container{
-    height: 400px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+  width: 550px;
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 11px 25px 35px 0px rgba(4, 91, 94, 0.664);
 }
 
-/* .input-box{
-    display: flex;
-    flex-direction: column;
-} */
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 540px;
+  width: 540px;
+  border-radius: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.123);
+  background-color: white;
+  box-shadow: inset 11px 25px 35px 0px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333333b9;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 200px;
+}
+
+.input-box input {
+  font-size: 1rem;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.input-box svg {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.googlebtn {
+  background-color: #6A9C89;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+} 
+
+
+
+.google-container {
+  margin-top: 1rem;
+
+
+}
+
+.googlebtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #de5246;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+
+.googlebtn svg {
+  margin-right: 5px;
+}

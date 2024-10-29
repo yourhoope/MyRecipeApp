@@ -1,26 +1,20 @@
 import NavBar from "../../components/navigation/NavBar";
-import { useState } from "react";
+import AddBtn from "../../components/add-btn/AddBtn";
+import MyRecipeCard from "../../common/cards/my-recipe-cards/MyRecipeCard";
+import Footer from "../../components/footer/footer";
 
 function MyRecipesPage() {
-  const [divs, setDivs] = useState([]);
-
-  const handleAddDiv = () => {
-    setDivs([...divs, `Div ${divs.length + 1}`]); // Add a new div label
-  };
-
   return (
     <div>
       <NavBar />
-      <div>
-        <button onClick={handleAddDiv}>Add Div</button>
-        <div>
-          {divs.map((div, index) => (
-            <div key={index} className="added-div">
-              {div}
-            </div>
-          ))}
+      <div className="rec-container">
+        <div className="rec-wrapper">
+          <h1>Your Added Recipes</h1>
+          <MyRecipeCard></MyRecipeCard>
         </div>
       </div>
+      <AddBtn></AddBtn>
+      <Footer></Footer>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import "./login-form.css";
-import { FaUser } from "react-icons/fa";
-import { FaLock } from "react-icons/fa";
+
 import { FaGoogle } from "react-icons/fa";
 import { useState } from "react";
 import {
@@ -9,7 +8,6 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 import { auth } from "../../../firebase";
-import { FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 
@@ -20,7 +18,7 @@ function LogInForm(){
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,7 +26,6 @@ function LogInForm(){
     setSuccess("");
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      setSuccess("Log In successful!");
       navigate("/MyRecipes");
     } catch (error) {
       setError(error.message);
@@ -47,9 +44,9 @@ function LogInForm(){
   };
 return (
   <div className="login-container">
-    <form action={handleSubmit}>
+    <form action={handleSubmit} className="logInform-container">
       <h1>LOG IN</h1>
-      <div className="input-box">
+      <div className="loginput-box">
         <input
           type="email"
           value={email}
@@ -58,9 +55,7 @@ return (
           required
         />
 
-        <FaUser />
-      </div>
-      <div className="input-box">
+        
         <input
           type="password"
           value={password}
@@ -68,8 +63,7 @@ return (
           placeholder="password"
           required
         />
-        <FaEye />
-        <FaLock />
+     
       </div>
       <div>
         <button type="submit" onClick={handleSubmit}>
@@ -77,14 +71,14 @@ return (
         </button>
       </div>
 
-      <div className="register">
+      <div className="newAcc-container">
         <p>
           Don`t have an account? <a href="/REGISTER"> Register </a>
         </p>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {success && <p style={{ color: "green" }}>{success}</p>}
         <h4>OR</h4>
-        <div className="btn-container">
+        <div className="google-container">
           <button className="googlebtn" onClick={handleGoogleSignIn}>
             <FaGoogle /> Continue with google
           </button>

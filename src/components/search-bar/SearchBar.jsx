@@ -1,9 +1,19 @@
+
 import "./SearchBar.css";
 
-function SearchBar(){
-   return (
-    <input type="text" className="searchbar" placeholder="Search for recipe..."/>
-   )
+function SearchBar( ) {
+
+
+  return (
+    <div>
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Search for recipe..."
+      />
+    </div>
+  );
 }
 
 export default SearchBar;
+

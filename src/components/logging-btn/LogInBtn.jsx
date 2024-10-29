@@ -1,4 +1,3 @@
-
 import "./LogInBtn.css";
 import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa"; // Profile Icon
@@ -8,32 +7,26 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 
 function LogInBtn() {
   const navigate = useNavigate();
-  const [user, setUser] = useState(null); 
+  const [user, setUser] = useState(null);
 
-  
   useEffect(() => {
     const logout = onAuthStateChanged(auth, (currentUser) => {
-      
-      setUser(currentUser); 
+      setUser(currentUser);
     });
-
-    
     return () => logout();
   }, []);
 
-  
   const handleLogout = async () => {
     try {
-      
       await signOut(auth);
-      setUser(null); 
-      navigate("/"); 
+      setUser(null);
+      navigate("/");
     } catch (error) {
       console.error("Error logging out:", error);
     }
   };
 
-const [ show, setShow] = useState(false); //
+  const [show, setShow] = useState(false); //
 
   return (
     <div>
@@ -43,6 +36,12 @@ const [ show, setShow] = useState(false); //
             size={30}
             onClick={() => setShow(!show)}
             className="profile-icon"
+            style={{
+              cursor: "pointer",
+              width: "35px",
+              height: "35px",
+              color: "#f1645f",
+            }}
           />
         </div>
       ) : (

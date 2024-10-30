@@ -20,7 +20,7 @@ function RegisterForm() {
     setSuccess("");
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      setSuccess("Account created successfully!");
+      setSuccess("Account created successfully! Now sign in");
     } catch (error) {
       setError(error.message);
     }

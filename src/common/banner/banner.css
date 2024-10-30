@@ -1,47 +1,42 @@
-
-.banner-container{
-    background-image: url("../src/assets/banner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 750px;
-    width: 1300px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.banner-container {
+background-image: url("https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 750px;
+  width: 1300px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.plate-container{
-    background-color: white;
-    width: 360px;
-    height: 360px;
-    border-radius: 100%;
-    box-shadow: 11px 25px 35px 0px rgba(4, 91, 94, 0.664);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.plate-container {
+  background-color: white;
+  width: 360px;
+  height: 360px;
+  border-radius: 100%;
+  box-shadow: 11px 25px 35px 0px rgba(4, 91, 94, 0.664);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.text-container{
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    width: 350px;
-    height: 350px;
-    border-top: 1px solid rgba(0, 0, 0, 0.103);
-    border-radius: 100%;
-    box-shadow: inset 11px 25px 35px 0px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-direction: column;
-  
-
+.text-container {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  width: 350px;
+  height: 350px;
+  border-top: 1px solid rgba(0, 0, 0, 0.103);
+  border-radius: 100%;
+  box-shadow: inset 11px 25px 35px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
 }
 
-.expl-btn{
- background-color: #f1645f;
+.expl-btn {
+  background-color: #f1645f;
   color: #fff;
   border: none;
   padding: 10px 15px;

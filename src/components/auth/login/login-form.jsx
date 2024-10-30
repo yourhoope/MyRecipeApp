@@ -55,7 +55,6 @@ return (
           required
         />
 
-        
         <input
           type="password"
           value={password}
@@ -63,7 +62,6 @@ return (
           placeholder="password"
           required
         />
-     
       </div>
       <div>
         <button type="submit" onClick={handleSubmit}>
@@ -73,7 +71,7 @@ return (
 
       <div className="newAcc-container">
         <p>
-          Don`t have an account? <a href="/REGISTER"> Register </a>
+          Don`t have an account? <a href="/MyRecipeApp/REGISTER"> Register </a>
         </p>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {success && <p style={{ color: "green" }}>{success}</p>}

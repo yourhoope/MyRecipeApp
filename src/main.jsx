@@ -14,46 +14,47 @@ import EditRecipePage from "./pages/edit-page/edit-page";
 
 
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "",
+      element: <HomePage />,
+    },
+    {
+      path: "/LOGIN",
+      element: <LogInPage />,
+    },
+    {
+      path: "/REGISTER",
+      element: <RegisterPage />,
+    },
+    {
+      path: "/Recipes",
+      element: <UsersRecipePage />,
+    },
+    {
+      path: "/MyRecipes",
+      element: <MyRecipesPage />,
+    },
+    {
+      path: "/Add-Recipe",
+      element: <AddRecipe />,
+    },
+    {
+      path: "/my-recipe/:recipeTitle",
+      element: <MyRecipeDetails />,
+    },
+    {
+      path: "/other-recipe/:recipeTitle",
+      element: <UserRecipeDetails />,
+    },
+    {
+      path: "/edit-recipe/:recipeId",
+      element: <EditRecipePage />,
+    },
+  ],
   {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/LOGIN",
-    element: <LogInPage />,
-  },
-  {
-    path: "/REGISTER",
-    element: <RegisterPage />,
-  },
-  {
-    path: "/Recipes",
-    element: <UsersRecipePage />,
-  },
-  {
-    path: "/MyRecipes",
-    element: <MyRecipesPage />,
-  },
-  {
-    path: "/Add-Recipe",
-    element: <AddRecipe />,
-  },
-  {
-    path: "/my-recipe/:recipeTitle",
-    element: <MyRecipeDetails />,
-  },
-  {
-    path: "/other-recipe/:recipeTitle",
-    element: <UserRecipeDetails />,
-  },
-  {
-    path: "/edit-recipe/:recipeId",
-    element: <EditRecipePage />,
-  },
-],
- {
-    basename: "/MyRecipeApp" 
+    basename: "/MyRecipeApp",
   }
 );
 

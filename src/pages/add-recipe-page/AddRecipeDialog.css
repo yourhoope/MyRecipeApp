@@ -87,11 +87,13 @@ border-radius: 20px;
 }
 
 .list-container ul {
+  
   list-style: none;
   padding: 0;
 }
 
 .list-container li {
+ 
   display: flex;
   align-items: center;
   gap: 0.5rem;

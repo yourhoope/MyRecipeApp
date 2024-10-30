@@ -160,7 +160,7 @@ function EditRecipePage() {
               <ul>
                 {formData.Ingredients.map((ingredient, index) => (
                   <li key={index}>
-                    <input
+                    <textarea
                       type="text"
                       value={ingredient}
                       onChange={(e) =>
@@ -247,7 +247,7 @@ function EditRecipePage() {
 
           <div className="form-btns">
             <button type="submit">Save Changes</button>
-            <button type="button" onClick={handleClear}>
+            <button type="button" onClick={handleClear} className="clear-btn">
               Clear
             </button>
           </div>

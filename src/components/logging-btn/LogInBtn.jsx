@@ -1,5 +1,5 @@
 import "./LogInBtn.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaUserCircle } from "react-icons/fa"; // Profile Icon
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase"; // Ensure Firebase is imported correctly
@@ -8,6 +8,8 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 function LogInBtn() {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
+  const [show, setShow] = useState(false);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const logout = onAuthStateChanged(auth, (currentUser) => {
@@ -26,7 +28,23 @@ function LogInBtn() {
     }
   };
 
-  const [show, setShow] = useState(false); //
+ useEffect(() => {
+   const handleClickOutside = (event) => {
+     if (containerRef.current && !containerRef.current.contains(event.target)) {
+       setShow(false);
+     }
+   };
+
+   if (show) {
+     document.addEventListener("mousedown", handleClickOutside);
+   } else {
+     document.removeEventListener("mousedown", handleClickOutside);
+   }
+
+   return () => {
+     document.removeEventListener("mousedown", handleClickOutside);
+   };
+ }, [show]);
 
   return (
     <div>
@@ -50,7 +68,7 @@ function LogInBtn() {
         </button>
       )}
       {show && (
-        <div className="logout-container">
+        <div ref={containerRef}  className="logout-container">
           <button className="logoutBtn" onClick={handleLogout}>
             Logout
           </button>

@@ -153,7 +153,7 @@ function AddRecipe() {
               <ul>
                 {formData.Ingredients.map((ingredient, index) => (
                   <li key={index}>
-                    <input
+                    <textarea
                       type="text"
                       value={ingredient}
                       onChange={(e) =>

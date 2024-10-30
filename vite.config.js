@@ -17,7 +17,7 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/MyRecipeApp/", // Adjust to your repository name on GitHub
+  base: "/MyRecipeApp", // Adjust to your repository name on GitHub
   plugins: [react()],
   resolve: {
     alias: {

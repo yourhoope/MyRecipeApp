@@ -1,13 +1,27 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// import { defineConfig } from 'vite'
+// import react from '@vitejs/plugin-react'
+
+// // https://vitejs.dev/config/
+// export default defineConfig({
+//   // base: '/RecipeApp_FinalProject/',
+//   plugins: [react()],
+//   resolve: {
+//     alias: {
+//       '@': '/src', // Makes `src` folder an alias for easier imports, if needed
+//     },
+//   }
+// })
+
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '/RecipeApp_FinalProject/',
+  base: "/MyRecipeApp/", // Adjust to your repository name on GitHub
   plugins: [react()],
   resolve: {
     alias: {
-      '@': '/src', // Makes `src` folder an alias for easier imports, if needed
+      "@": "/src", // Keeps `src` as an alias for easier imports, if needed
     },
-  }
-})
+  },
+});

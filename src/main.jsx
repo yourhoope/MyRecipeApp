@@ -51,7 +51,11 @@ const router = createBrowserRouter([
     path: "/edit-recipe/:recipeId",
     element: <EditRecipePage />,
   },
-]);
+],
+ {
+    basename: "/MyRecipeApp" 
+  }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

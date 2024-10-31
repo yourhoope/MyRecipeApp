@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <nav className="nav-container">
       <div className="pages-container">
-        <a href="/" className="Logo-Img">
+        <a href="" className="Logo-Img">
           <img
             src="https://i.pinimg.com/736x/62/e2/e1/62e2e1fd6e131aa7a97456e471deda19.jpg"
             alt="RecipeLogo"
@@ -15,13 +15,13 @@ function NavBar() {
         </a>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="">Home</a>
           </li>
           <li>
-            <a href="/MyRecipeApp/Recipes">Recipes</a>
+            <a href="/Recipes">Recipes</a>
           </li>
           <li>
-            <a href="/MyRecipeApp/MyRecipes">My Recipes</a>
+            <a href="/MyRecipes">My Recipes</a>
           </li>
         </ul>
       </div>

@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -71,7 +72,7 @@ return (
 
       <div className="newAcc-container">
         <p>
-          Don`t have an account? <a href="/MyRecipeApp/REGISTER"> Register </a>
+          Don`t have an account? <Link to="/REGISTER"> Register </Link>
         </p>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {success && <p style={{ color: "green" }}>{success}</p>}

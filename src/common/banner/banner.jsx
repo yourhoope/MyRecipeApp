@@ -1,14 +1,14 @@
 import "./banner.css";
-
+import { Link } from "react-router-dom";
 function Banner(){
 return (
   <div className="banner-container">
     <div className="plate-container">
       <div className="text-container">
         <p>Eat Fresh. Eat Happy.</p>
-        <a href="/MyRecipeApp/Recipes">
+        <Link to="/Recipes">
           <button className="expl-btn">Explore Our Menu</button>
-        </a>
+        </Link>
       </div>
     </div>
   </div>

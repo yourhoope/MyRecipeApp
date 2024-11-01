@@ -13,7 +13,9 @@ function OtherRecipes() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/RecipesData");
+        const response = await fetch(
+          "https://yourhoope.github.io/recipes-api/recipes-apis.json"
+        );
         const result = await response.json();
         setRecipeData(result);
       } catch (error) {

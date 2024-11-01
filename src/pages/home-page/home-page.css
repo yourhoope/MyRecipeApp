@@ -18,3 +18,9 @@
     flex-direction: column;
     max-width: 1500px;
 }
+ @media screen and (min-width: 12px) and (max-width: 700px){}
+@media screen and (min-width: 12px) and (max-width: 700px){
+    .home-wrapper{
+        width: 100%;
+    }
+} 

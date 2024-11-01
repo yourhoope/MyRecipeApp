@@ -15,17 +15,6 @@ function Footer(){
             </p>
           </div>
 
-          <div className="footer-section links">
-            <h2>Quick Links</h2>
-            <ul>
-              <li>
-                <a href="/about">About</a>
-              </li>
-              <li>
-                <a href="/contact">Contact Us</a>
-              </li>
-            </ul>
-          </div>
 
          
         </div>

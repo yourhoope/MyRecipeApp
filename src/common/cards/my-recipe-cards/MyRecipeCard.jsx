@@ -13,42 +13,45 @@ import { useNavigate } from "react-router-dom";
 function MyRecipeCard() {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null); 
 
   const auth = getAuth();
   const db = getFirestore();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchUserData = async () => {
-      onAuthStateChanged(auth, async (user) => {
-        if (user) {
-          const uid = user.uid;
-          const recipesRef = collection(doc(db, "users", uid), "recipes");
+    const fetchUserData = async (currentUser) => {
+      const uid = currentUser.uid;
+      const recipesRef = collection(doc(db, "users", uid), "recipes");
 
-          try {
-            const snapshot = await getDocs(recipesRef);
-            const recipesData = snapshot.docs.map((doc) => ({
-              id: doc.id,
-              ...doc.data(),
-            }));
-            setRecipes(recipesData);
-            setLoading(false);
-          } catch (error) {
-            console.error("Error fetching recipes:", error);
-          }
-        } else {
-          console.log("Not signed in");
-          setLoading(false);
-        }
-      });
+      try {
+        const snapshot = await getDocs(recipesRef);
+        const recipesData = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setRecipes(recipesData);
+      } catch (error) {
+        console.error("Error fetching recipes:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    fetchUserData();
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      if (currentUser) {
+        fetchUserData(currentUser);
+      } else {
+        setLoading(false); 
+      }
+    });
+
+    return () => unsubscribe();
   }, [auth, db]);
 
   const handleDelete = async (id) => {
     try {
-      const user = auth.currentUser;
       if (user) {
         const recipeDocRef = doc(db, "users", user.uid, "recipes", id);
         await deleteDoc(recipeDocRef);
@@ -65,17 +68,17 @@ function MyRecipeCard() {
   };
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p className="loading">Loading...</p>; 
   }
 
   return (
     <div className="users-container">
-      {recipes.length > 0 ? (
+      {user ? (
         recipes.map((recipe) => (
           <div key={recipe.id} className="recipe-card">
             <img
               src={recipe.imageUrl || "default_image_url"}
-              alt="Food Image"
+              alt={`${recipe.RecipeTitle} Image`}
               className="rec-img"
             />
 
@@ -94,8 +97,18 @@ function MyRecipeCard() {
               <p>{recipe.Description}</p>
             </div>
             <div className="card-actions">
-              <button onClick={() => handleEdit(recipe.id)} className="edit-btn">Edit</button>
-              <button onClick={() => handleDelete(recipe.id)} className="delete-btn">Delete</button>
+              <button
+                onClick={() => handleEdit(recipe.id)}
+                className="edit-btn"
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => handleDelete(recipe.id)}
+                className="delete-btn"
+              >
+                Delete
+              </button>
             </div>
           </div>
         ))

@@ -9,6 +9,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import LogoLoader from "../../loader/laoder";
 
 function MyRecipeCard() {
   const [recipes, setRecipes] = useState([]);
@@ -68,7 +69,7 @@ function MyRecipeCard() {
   };
 
   if (loading) {
-    return <p className="loading">Loading...</p>; 
+    return <LogoLoader/>; 
   }
 
   return (

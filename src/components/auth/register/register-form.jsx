@@ -7,12 +7,14 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 import { auth } from "../../../firebase";
+import { useNavigate } from "react-router-dom";
 
 function RegisterForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,6 +23,9 @@ function RegisterForm() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       setSuccess("Account created successfully! Now sign in");
+      setTimeout(() => {
+        navigate("/MyRecipes");
+      }, 2000);
     } catch (error) {
       setError(error.message);
     }

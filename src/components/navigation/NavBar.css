@@ -12,7 +12,8 @@
     font-family: "Playpen Sans", sans-serif;
     border-bottom: 1px solid #24222233;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 80px;
     align-items: center;
     overflow: hidden;
   }
@@ -58,7 +59,8 @@ a {
 
 @media screen and (min-width: 12px) and (max-width: 768px){
 .nav-container{
-  justify-content: center;
+  justify-content: space-around;
+  
 }
    .pages-container {
     display: none;
@@ -87,7 +89,7 @@ a {
     left: 0;
     height: 35%;
     width: 250px;
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);

@@ -57,4 +57,34 @@
   border-radius: 20px; 
   object-fit: cover; }
 
+  .search-bar{
+    height: 31px;
+   width: 250px;
+   
+    border-radius: 5px;
+    border: 2px solid #6A9C89;
+  }
+
+  .search-container{
+    display: flex;
+    justify-content: start;
+    max-width: 1200px;
+  margin: 20px;
+  }
+
+
+@media screen and (min-width: 700px) and (max-width: 1100px){
+        .search-bar{
+    height: 31px;
+   width: 150px;
+}
+}
+@media screen and (min-width: 12px) and (max-width: 768px){
+    .search-bar{
+    height: 31px;
+   width: 150px;
+}
+
+}
+
 

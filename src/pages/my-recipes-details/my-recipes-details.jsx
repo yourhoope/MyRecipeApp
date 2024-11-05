@@ -12,6 +12,7 @@ import {
   getDocs,
 } from "firebase/firestore";
 import "./my-recipes-details.css";
+import LogoLoader from "../../common/loader/laoder";
 
 function MyRecipeDetails() {
   const { recipeTitle } = useParams();
@@ -45,7 +46,7 @@ function MyRecipeDetails() {
   }, [recipeTitle, auth, db]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <LogoLoader/>;
   }
 
   if (!recipe) {

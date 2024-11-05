@@ -98,3 +98,14 @@ label {
 .googlebtn svg {
   margin-right: 5px;
 }
+
+@media screen and (min-width: 12px) and (max-width: 700px){
+.register-container form{
+     width: 90%;
+  border-radius: 20px;
+  }
+.register-container {
+  width: 90%;
+  border-radius: 20px;
+}
+}

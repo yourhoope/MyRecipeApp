@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "../../components/navigation/NavBar";
+import LogoLoader from "../../common/loader/laoder";
 
 function UserRecipeDetails() {
   const { recipeTitle } = useParams();
@@ -33,7 +34,7 @@ function UserRecipeDetails() {
     fetchData();
   }, [recipeTitle]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <LogoLoader></LogoLoader>;
   if (!recipe) return <div>Recipe not found.</div>;
 
   return (

@@ -1,8 +1,8 @@
 import "./LogInBtn.css";
 import { useEffect, useRef, useState } from "react";
-import { FaUserCircle } from "react-icons/fa"; // Profile Icon
+import { FaUserCircle } from "react-icons/fa"; 
 import { useNavigate } from "react-router-dom";
-import { auth } from "../../firebase"; // Ensure Firebase is imported correctly
+import { auth } from "../../firebase"; 
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
 function LogInBtn() {
